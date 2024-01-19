@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title> Journal Subscription</title>
+</head>
+<body>
+    <h1> Subscription Form</h1>
+    <form action="" method="get">
+        <div class="start_date">
+            <label for="start_date">Starting Date:</label>
+            <input type="date" name="star_date" id="star_date" required >
+        </div>
+
+        <div class="duration">
+            <label for="subscriptionDuration">Subscription Duration:</label>
+            <input type="range" name="subscription Duration" id="subscriptionDuration"value="1" min="1" max="10" oninput="durationDisplay.textContent = '  ' + this.value + ' year' + (this.value > 1 ? 's' : '');">
+            <span id="durationDisplay">  1 year</span>
+        </div>
+            
+
+        
+        <div class="occupation">
+    
+            <label>Occupation:</label>
+            
+            <div style="border-top: px;"><br><label  for="Work">Student</label></div>
+
+            <fieldset style="margin: 3px 0px 15px 0px;" id="courseDetails">
+            <legend>Course Details</legend>
+
+            <input type="radio" id="cs" name="Work" value="Computer Science">
+            <label for="cs">Computer Science</label>
+
+            <input type="radio" id="eng" name="Work" value="Engineering">
+            <label for="eng">Engineering</label>
+
+            <input type="radio" id="med" name="Work" value="Medicine">
+            <label for="med">Medicine</label>
+            </fieldset>
+
+            
+            <div><p>Professional</p></div>
+
+            <fieldset id="courseDetails" style="margin-top: -12px;">
+                <legend>Work</legend>
+    
+                <input type="radio" id="doc" name="Work" value="Doctor">
+                <label for="doc">Doctor</label>
+    
+                <input type="radio" id="eng" name="Work" value="Engineer">
+                <label for="eng">Engineer</label>
+            </fieldset>
+        </div>
+
+        <div class="journal_title" style="margin-top: -15px;">
+            <label class="title">Journal title:</label><br>
+
+            <select name="journal title" id="journal_title">
+                <option value="select" >select</option>
+                <option value="Environmental Science and Sustainability">Environmental Science and Sustainability</option>
+                <option value="Medical Advances and Healthcare Innovation">Medical Advances and Healthcare Innovation</option>
+                <option value="Educational Psychology and Learning Sciences">Educational Psychology and Learning Sciences</option>
+                <option value="Information Technology and Cybersecurity">Information Technology and Cybersecurity</option>
+                <option value="Social Justice and Human Rights">Social Justice and Human Rights</option>
+            </select>
+        </div>
+
+        <div class="no_of_sub">
+            <label for="no_of_sub">Number of subscriptions:</label>
+            <input type="number" name="no of subscriptions" id="no_of_sub" min="10" max="200" placeholder="enter">
+        </div>
+
+        <div class="web_url">
+            <label for="web_url">Web URL:</label>
+            <input type="url" name="web url" id="web_url" pattern="(https:\/\/\.|http:\/\/).*" placeholder="enter url">
+        </div>
+
+        <button type="submit"><b>Submit</b></button>
+
+
+
+
+    </form>
+</body>
+</html>
